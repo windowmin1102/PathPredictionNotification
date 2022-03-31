@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item> <!-- 타이틀바 제거 -->
+        <item name="android:windowFullscreen">true</item> <!-- 풀스크린 -->
+    </style>
+
+    <!-- 스플래시 스크린 액티비티용 테마 -->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:background">
+            @drawable/splash
+        </item>
+    </style>
+
+    <!-- 탭 호스트 -->
+    <style name="TabTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#ffffff</item>                                  <!-- 배경 -->
+        <item name="android:textColorPrimary">@android:color/white</item>       <!-- 탭바 선택된 텍스트 -->
+        <item name="android:textColorSecondary">@android:color/black</item>     <!-- 탭바 텍스트 -->
+        <item name="colorAccent">@android:color/black</item>                       <!-- 하단 움직이는 바 색-->
+    </style>
+
+</resources>

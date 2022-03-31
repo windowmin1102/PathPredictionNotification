@@ -1,0 +1,1 @@
+<num> <segment_id> <kind> <notification_content> <date_time>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test.pathpredictionnotification">
+
+    <!-- 웹뷰 인터넷 퍼미션 추가 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- GPS 엑세스 허용 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_image"
+        android:label="사전알림"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 구글맵 api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBGzwNppFVKo8KKjDjKUxnxoSSzh1dijKM" />
+
+        <!-- 로딩화면 먼저 실행 -->
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 메인화면 -->
+        <activity android:name=".MainActivity" />
+
+        <!-- 서비스: 엑티비티 강제 종료시 백그라운드 서비스로 강제 종료(stopWithTask) -->
+        <service
+            android:name=".BackGroundService"
+            android:enabled="true"
+            android:stopWithTask="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".PopupActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+
+    </application>
+
+</manifest>
